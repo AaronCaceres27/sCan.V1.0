@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_perrito2"
+    tools:context=".RegistroActivity">
+    <TextView
+        android:id="@+id/tittleRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        android:gravity="center"
+        android:layout_margin="50dp"
+        android:textColor="#5C3C0B"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/nombreRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tittleRegistro"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#90FFFFFF"
+        android:hint="Ingresa tu nombre"
+        android:padding="13dp"
+        android:textColorHint="#6D000000"></EditText>
+
+    <EditText
+        android:id="@+id/correoRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nombreRegistro"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#90FFFFFF"
+        android:hint="Ingresa tu correo"
+        android:inputType="textEmailAddress"
+        android:padding="13dp"
+        android:textColorHint="#6D000000"></EditText>
+
+    <EditText
+        android:id="@+id/pasRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/correoRegistro"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#90FFFFFF"
+        android:hint="Ingresa tu contraseña"
+        android:padding="13dp"
+        android:inputType="textPassword"
+        android:textColorHint="#6D000000"></EditText>
+    <Button
+        android:id="@+id/btnRegistrado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/pasRegistro"
+        android:backgroundTint="#A57123"
+        android:text="Registrarse"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"></Button>
+
+
+</RelativeLayout>

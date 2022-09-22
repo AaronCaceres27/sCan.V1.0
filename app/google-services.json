@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "649402008062",
+    "project_id": "scan-8eda5",
+    "storage_bucket": "scan-8eda5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649402008062:android:938aa47d920101341f00af",
+        "android_client_info": {
+          "package_name": "com.scan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649402008062-pfpmnvqv83mmigr2mnlu6tn6icv910kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxkDVcAvo83EhYf_flDdsy5uACHoqW7ZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649402008062-pfpmnvqv83mmigr2mnlu6tn6icv910kc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +17,10 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.scan.common.Tutorial;
+import android.os.Handler;
+
+import com.scan.common.Tutorial;
 
 import java.util.ArrayList;
 
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
+        //Tutorial
+
 
         TextView username =(TextView) findViewById(R.id.usuario);
         TextView password1 =(TextView) findViewById(R.id.pass);
@@ -51,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,RegistroActivity.class));
             }
         });
+
     }
 
     private void loginUser(String emailUser, String password2) {

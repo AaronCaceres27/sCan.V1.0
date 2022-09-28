@@ -2,4 +2,14 @@
     <string name="app_name">sCan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- descripcion slider -->
+    <string name="desc_uno">Muchas veces nuestros queridos amigos peludos de curiosos salen de casa y se pierden. Dejandonos con un gran dolor en el corazón, deseando que vuelvan pronto. Con sCan es posible reencontrarte con tu peludo amigo.</string>
+    <string name="desc_dos">Crea un usuario para poder acceder al portal y buscar o realizar publicaciones sobre algun animal o perrito encontrado por las aterradoreas calles</string>
+    <string name="desc_tres">Comparte tu ubicacion y tus datos como nombre o numero celular, son importantes al momento de hacer una publicacion, para que puedan contactarse contigo. </string>
+    <string name="desc_cuatro">Con sCan te aseguramos una manera mas facil para encontrar a tu perrito perdido, solo tienes que estar atento a las publicaciones del sector en el que te encuentras. Tambien puedes crear publicaciones de "SE BUSCA" para simplificar el reencuentro. !DISFRUTA DE LA APP!</string>
+    <!-- tittle slider-->
+    <string name="tittle_uno">Un corazón roto</string>
+    <string name="tittle_dos">Contactate!</string>
+    <string name="tittle_tres">Comparte tu ubicaion</string>
+    <string name="tittle_cuatro">Tu perro en casa</string>
 </resources>

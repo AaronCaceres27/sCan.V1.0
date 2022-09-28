@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_perrito2"
+    android:background="@drawable/fondo_registro2"
     tools:context=".RegistroActivity">
     <TextView
         android:id="@+id/tittleRegistro"
@@ -28,6 +28,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
+        android:textColor="@color/black"
         android:background="#90FFFFFF"
         android:hint="Ingresa tu nombre"
         android:padding="13dp"
@@ -41,6 +42,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
         android:layout_marginBottom="10dp"
         android:background="#90FFFFFF"
         android:hint="Ingresa tu correo"
@@ -54,6 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/correoRegistro"
         android:layout_marginStart="10dp"
+        android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"

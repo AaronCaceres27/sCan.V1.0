@@ -6,55 +6,126 @@
     android:layout_marginRight="10dp"
     android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
-    app:cardBackgroundColor="#A11B4585">
+    app:cardBackgroundColor="#721B4585">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/lyt1.1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="10dp"
-            android:paddingRight="160dp"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:id="@+id/datos"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/lyt1"
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/ImagenUser"
+                    android:layout_width="48dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/userid" />
+
+                <TextView
+                    android:id="@+id/nombrePublicacion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/ImagenUser"
+                    android:text="Nombre"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+                <TextView
+                    android:id="@+id/datosApellido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_toRightOf="@+id/ImagenUser"
+                    android:text="Apellido"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Datos"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"></TextView>
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_editar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/btn_eliminar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_delete_24"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lyt1.1"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp">
+
             <TextView
-                android:id="@+id/celular"
+                android:id="@+id/celular2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Celular"
+                android:textColor="@color/white"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"></TextView>
+                android:textStyle="bold"></TextView>
 
             <TextView
                 android:id="@+id/place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/celular2"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="lugar"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15dp"></TextView>
+
             <TextView
                 android:id="@+id/descripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/place"
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp"
                 android:text="Descripcion"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="15dp"></TextView>
+
+
         </LinearLayout>
+
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

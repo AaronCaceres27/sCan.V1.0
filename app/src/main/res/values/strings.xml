@@ -10,6 +10,6 @@
     <!-- tittle slider-->
     <string name="tittle_uno">Un corazón roto</string>
     <string name="tittle_dos">Contactate!</string>
-    <string name="tittle_tres">Comparte tu ubicaion</string>
+    <string name="tittle_tres">Comparte tu ubicacion</string>
     <string name="tittle_cuatro">Tu perro en casa</string>
 </resources>

@@ -1,28 +1,30 @@
 package com.scan.model;
 
 public class Publicacion {
-    String datos ,lugar, descripcion;
-
-    public Publicacion(String datos, String lugar, String descripcion) {
-        this.datos = datos;
+    String name ,lugar, descripcion,celular,apellido,foto;
+    int id;
+    public Publicacion(String name, String lugar, String descripcion,String celular,int id,String apellido,String foto) {
+        this.id = id;
+        this.name = name;
         this.lugar = lugar;
         this.descripcion = descripcion;
+        this.celular = celular;
+        this.apellido = apellido;
+        this.foto = foto;
     }
 
     public Publicacion(){
     }
 
-    public String getDatos() {
-        return datos;
+    public String getName() {
+        return name;
     }
 
-    public void setDatos(String datos) {
-        this.datos = datos;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getLugar() {
-        return lugar;
-    }
+    public String getLugar() {return lugar;}
 
     public void setLugar(String lugar) {
         this.lugar = lugar;
@@ -35,4 +37,20 @@ public class Publicacion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public void setCelular(String celular) {this.celular = celular;}
+
+    public String getCelular(){return celular;}
+
+    public void setId(Integer id) {this.id = id;}
+
+    public String getFoto() {return foto;}
+
+    public void setFoto(String foto) {this.foto = foto;}
+
+    public Integer id(){return  id;}
+
+    public String getApellido(){return apellido;}
+
+    public void setApellido(String apellido) {this.apellido = apellido;}
 }

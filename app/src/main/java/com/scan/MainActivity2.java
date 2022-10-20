@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -32,12 +33,11 @@ public class MainActivity2 extends AppCompatActivity {
 
         FirestoreRecyclerOptions<Publicacion> firestoreRecyclerOptions = new FirestoreRecyclerOptions.Builder<Publicacion>().setQuery(query,Publicacion.class).build();
 
-        mPublicacionAdapter = new PublicacionAdapter(firestoreRecyclerOptions);
+        mPublicacionAdapter = new PublicacionAdapter(firestoreRecyclerOptions,this,getSupportFragmentManager());
         mPublicacionAdapter.notifyDataSetChanged();
         mRecycler.setAdapter(mPublicacionAdapter);
-
+        ImageView btnPerfil = (ImageView) findViewById(R.id.btnPerfil);
         Button btnAgregar = (Button) findViewById(R.id.btnCrear);
-        Button btnClose =  (Button) findViewById(R.id.btncerrar);
         mAuth = FirebaseAuth.getInstance();
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,12 +47,11 @@ public class MainActivity2 extends AppCompatActivity {
                 fm.show(getSupportFragmentManager(), "navegar a fragment");
             }
         });
-        btnClose.setOnClickListener(new View.OnClickListener() {
+        btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
                 finish();
-                startActivity(new Intent(MainActivity2.this,MainActivity.class));
+                startActivity(new Intent(MainActivity2.this,PerfilActivity.class));
             }
         });
     }
@@ -68,4 +67,5 @@ public class MainActivity2 extends AppCompatActivity {
         super.onStop();
         mPublicacionAdapter.stopListening();
     }
+    //Item click
 }

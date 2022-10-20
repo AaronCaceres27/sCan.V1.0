@@ -13,7 +13,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class SplashActivity extends AppCompatActivity {
-    private static int SPLASH_TIMER = 5000;
+    private static int SPLASH_TIMER = 2000;
     SharedPreferences tutorial;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,10 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask tarea = new TimerTask() {
             @Override
             public void run() {
-            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
             }
         };
         Timer tiempo = new Timer();
-        tiempo.schedule(tarea, 5000);
+        tiempo.schedule(tarea, 2000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -47,8 +44,6 @@ public class SplashActivity extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }
-
-
             }
         },SPLASH_TIMER);
     }

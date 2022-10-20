@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -19,17 +20,20 @@ import java.util.Map;
 
 public class AgregarPublicacion extends AppCompatActivity {
     Button btn_agregar;
-    EditText datos, lugar, descripcion;
+    EditText lugar, descripcion;
+    TextView datos, celular, apellido;
     private FirebaseFirestore mfirestore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_publicacion);
+        setContentView(R.layout.fragment_registro_animal);
         this.setTitle("Crear Publicacion");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mfirestore = FirebaseFirestore.getInstance();
-        datos = findViewById(R.id.datosAnimal);
+        datos = findViewById(R.id.nombrePublicacion);
+        apellido = findViewById(R.id.datosApellido);
         lugar = findViewById(R.id.lugarAnimal);
+        celular= findViewById(R.id.celular2);
         descripcion = findViewById(R.id.descripcionAnimal);
         btn_agregar = findViewById(R.id.btnSubir);
         btn_agregar.setOnClickListener(new View.OnClickListener() {
@@ -38,10 +42,11 @@ public class AgregarPublicacion extends AppCompatActivity {
                 String datosPersonales = datos.getText().toString().trim();
                 String lugarEncontrado = lugar.getText().toString().trim();
                 String descripcionAnimal = descripcion.getText().toString().trim();
-                if(datosPersonales.isEmpty() && lugarEncontrado.isEmpty() && descripcionAnimal.isEmpty()){
+                String celularNumber =  celular.getText().toString().trim();
+                if(datosPersonales.isEmpty() && lugarEncontrado.isEmpty() && descripcionAnimal.isEmpty() && celularNumber.isEmpty()){
                     Toast toast = Toast.makeText(getApplicationContext(),"Ingrese los datos" , Toast.LENGTH_LONG);toast.show();
                 }else{
-                    postAnimal(datosPersonales,lugarEncontrado,descripcionAnimal);
+                    postAnimal(datosPersonales,lugarEncontrado,descripcionAnimal,celularNumber);
                 }
             }
         });
@@ -52,11 +57,12 @@ public class AgregarPublicacion extends AppCompatActivity {
         onBackPressed();
         return false;
     }
-    private void postAnimal(String datosPersonales, String lugarEncontrado, String descripcionAnimal) {
+    private void postAnimal(String celularDueño, String datosPersonales, String lugarEncontrado, String descripcionAnimal) {
         Map<String, Object> map = new HashMap<>();
         map.put("datos",datosPersonales);
         map.put("lugar",lugarEncontrado);
         map.put("descripcion",descripcionAnimal);
+        map.put("celular", celularDueño);
         mfirestore.collection("publicacion").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {

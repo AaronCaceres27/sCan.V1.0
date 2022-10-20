@@ -47,7 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
                 if(emailUser.isEmpty() && password2.isEmpty()){
                     Toast toast = Toast.makeText(MainActivity.this,"Ingrese los datos" , Toast.LENGTH_LONG);toast.show();
-                }else{
+                }
+                else if(!emailUser.isEmpty() && password2.isEmpty()){
+                    Toast toast = Toast.makeText(MainActivity.this,"Ingrese la contraseña" , Toast.LENGTH_LONG);toast.show();
+                }
+                else{
                     loginUser(emailUser,password2);
                 }
             }

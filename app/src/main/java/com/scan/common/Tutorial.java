@@ -114,9 +114,7 @@ public class Tutorial extends AppCompatActivity {
                 next.setVisibility(View.INVISIBLE);
                 skip.setVisibility(View.INVISIBLE);
             }
-
         }
-
         @Override
         public void onPageScrollStateChanged(int state) {
 

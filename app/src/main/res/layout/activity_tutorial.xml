@@ -45,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#2667B6"
-        android:text="Comencemos"
         android:onClick="sig"
+        android:text="Comencemos"
         android:visibility="invisible" />
     <LinearLayout
         android:id="@+id/dots"

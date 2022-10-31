@@ -14,7 +14,7 @@
         android:layout_marginLeft="100dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="#00000000"
+        android:backgroundTint="#DFB1621E"
         android:text="Agregar Publicacion">
 
     </Button>

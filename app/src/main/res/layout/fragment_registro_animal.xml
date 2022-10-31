@@ -14,7 +14,7 @@
       android:layout_width="350dp"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:background="#0E4875"
+      android:background="#BCCC5729"
       android:layout_gravity="center"
       android:layout_margin="10dp">
       <TextView

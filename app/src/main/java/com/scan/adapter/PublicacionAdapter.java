@@ -1,9 +1,16 @@
 package com.scan.adapter;
 
+import static com.firebase.ui.auth.AuthUI.getApplicationContext;
+
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +21,10 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,8 +33,12 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.scan.PerfilActivity;
 import com.scan.R;
 import com.scan.RegistroActivity;
 import com.scan.RegistroAnimal;
@@ -37,8 +51,11 @@ public class PublicacionAdapter extends FirestoreRecyclerAdapter<Publicacion, Pu
     private FirebaseFirestore mFireStore = FirebaseFirestore.getInstance();
     Activity activity;
     FragmentManager fm;
+    String fono;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     String uid;
+    @SuppressLint("RestrictedApi")
+    Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
 
     public PublicacionAdapter(@NonNull FirestoreRecyclerOptions<Publicacion> options, Activity activity, FragmentManager fm) {
         super(options);
@@ -89,6 +106,7 @@ public class PublicacionAdapter extends FirestoreRecyclerAdapter<Publicacion, Pu
         mFireStore.collection("publicacion").document(id).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void unused) {
+                vibrator.vibrate(500);
                 Toast.makeText(activity, "Publicacion eliminada", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
@@ -121,5 +139,6 @@ public class PublicacionAdapter extends FirestoreRecyclerAdapter<Publicacion, Pu
             fotoPublicacion = itemView.findViewById(R.id.fotoPerfilUser);
         }
     }
+
 
 }

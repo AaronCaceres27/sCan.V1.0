@@ -1,4 +1,4 @@
-package com.scan;
+package com.scanstomas;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,8 +14,8 @@ import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
-import com.scan.adapter.PublicacionAdapter;
-import com.scan.model.Publicacion;
+import com.scanstomas.adapter.PublicacionAdapter;
+import com.scanstomas.model.Publicacion;
 
 public class MainActivity2 extends AppCompatActivity {
     FirebaseAuth mAuth;

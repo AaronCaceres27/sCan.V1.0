@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.scan">
+    package="com.scanstomas">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,25 +14,25 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".common.Tutorial"
+            android:name="com.scanstomas.common.Tutorial"
             android:exported="false" />
         <activity
-            android:name=".AgregarPublicacion"
+            android:name="com.scanstomas.AgregarPublicacion"
             android:exported="false" />
         <activity
-            android:name=".RegistroActivity"
+            android:name="com.scanstomas.RegistroActivity"
             android:exported="false" />
         <activity
-            android:name=".PerfilActivity"
+            android:name="com.scanstomas.PerfilActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name="com.scanstomas.MainActivity2"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.scanstomas.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.scanstomas.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

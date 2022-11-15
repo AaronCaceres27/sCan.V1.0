@@ -1,4 +1,4 @@
-package com.scan.model;
+package com.scanstomas.model;
 
 public class Publicacion {
     String name ,lugar, descripcion,celular,apellido,foto;

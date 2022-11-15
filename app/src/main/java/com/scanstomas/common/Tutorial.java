@@ -1,8 +1,7 @@
-package com.scan.common;
+package com.scanstomas.common;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,10 +14,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.scan.MainActivity;
-import com.scan.R;
-import com.scan.RegistroActivity;
-import com.scan.adapter.SliderAdapter;
+import com.scanstomas.R;
+import com.scanstomas.RegistroActivity;
+import com.scanstomas.adapter.SliderAdapter;
 
 public class Tutorial extends AppCompatActivity {
 

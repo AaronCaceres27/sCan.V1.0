@@ -1,4 +1,4 @@
-package com.scan;
+package com.scanstomas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.scan.common.Tutorial;
+import com.scanstomas.common.Tutorial;
 
 import java.util.Timer;
 import java.util.TimerTask;

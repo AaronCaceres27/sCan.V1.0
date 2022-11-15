@@ -1,4 +1,4 @@
-package com.scan.adapter;
+package com.scanstomas.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.scan.R;
+import com.scanstomas.R;
 
 public class SliderAdapter extends PagerAdapter {
 

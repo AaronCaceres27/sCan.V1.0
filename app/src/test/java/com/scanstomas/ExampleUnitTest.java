@@ -1,4 +1,4 @@
-package com.scan;
+package com.scanstomas;
 
 import org.junit.Test;
 
